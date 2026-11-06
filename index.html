@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gabriele Usai</title>
+<meta name="description" content="Gabriele Usai. AI Specialist Intern at IDC and Master's Graduate at Fordham University.">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Gabriele Usai">
+<meta property="og:description" content="AI Specialist Intern at IDC. Master's Graduate at Fordham University.">
+<meta property="og:image" content="assets/photo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FFFFFF; --ink:#0E1A2B; --ink2:#46546A; --muted:#7A8699; --line:#E6E9EF; --soft:#F5F7FA;
+  --accent:#2B4C9B; --accent-soft:#EEF2FB;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:16px/1.6 "DM Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 32px}
+@media (max-width:640px){.wrap{padding:0 16px}}
+
+/* Header */
+header.top{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:28px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.me{display:flex;align-items:center;gap:18px}
+.photo{width:76px;height:76px;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-weight:700;font-size:26px;overflow:hidden;flex:none}
+.photo img{width:100%;height:100%;object-fit:cover}
+h1{margin:0;font-size:28px;line-height:1.15;letter-spacing:-.02em;font-weight:700}
+.me p{margin:4px 0 0;color:var(--ink2);font-size:15.5px;line-height:1.45}
+.buttons{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:8px;font-weight:600;font-size:15px;text-decoration:none;border:1px solid var(--accent);background:var(--accent);color:#fff}
+.btn:hover{background:#21407F;border-color:#21407F}
+.btn.line{background:#fff;color:var(--accent)}
+.btn.line:hover{background:var(--accent-soft)}
+.btn.gh{background:var(--ink);border-color:var(--ink)}.btn.gh:hover{background:#24324A;border-color:#24324A}
+.btn svg{width:16px;height:16px;fill:currentColor}
+
+/* Two columns */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:48px;padding:40px 0 16px;align-items:start}
+@media (max-width:860px){.cols{grid-template-columns:1fr;gap:32px}}
+h2{font-size:13.5px;font-weight:700;color:var(--muted);letter-spacing:.02em;margin:0 0 14px}
+
+/* Entries */
+details{border:1px solid var(--line);border-radius:12px;margin-bottom:12px;background:#fff;transition:border-color .15s}
+details:hover,details[open]{border-color:#C9D2E3}
+summary{list-style:none;display:grid;grid-template-columns:48px 1fr 20px;gap:14px;align-items:center;padding:14px 16px;cursor:pointer}
+summary::-webkit-details-marker{display:none}
+.logo{width:48px;height:48px;border-radius:10px;border:1px solid var(--line);background:#fff;display:grid;place-items:center;font-weight:700;font-size:13px;color:var(--accent);overflow:hidden}
+.logo img{width:100%;height:100%;object-fit:cover}
+.title{font-weight:600;font-size:16.5px;line-height:1.3}
+.sub{color:var(--ink2);font-size:14.5px;line-height:1.4;margin-top:2px}
+.dates{color:var(--muted);font-size:13.5px;margin-top:2px;font-variant-numeric:tabular-nums}
+.chev{width:20px;height:20px;color:var(--muted);transition:transform .2s}
+details[open] .chev{transform:rotate(180deg)}
+@media (prefers-reduced-motion:reduce){.chev,details{transition:none}}
+.body{padding:0 18px 16px 78px;color:var(--ink2);font-size:15px}
+.body ul{margin:0;padding-left:18px}
+.body li{margin:6px 0}
+.body p{margin:6px 0}
+.body b{color:var(--ink);font-weight:600}
+@media (max-width:520px){.body{padding:0 16px 16px 16px}summary{grid-template-columns:40px 1fr 18px;gap:12px}.logo{width:40px;height:40px}}
+
+/* Projects + materials */
+section.full{padding:24px 0 8px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media (max-width:1000px){.grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.grid{grid-template-columns:1fr}}
+.card{border:1px solid var(--line);border-radius:12px;padding:18px;display:flex;flex-direction:column}
+.card .kind{font-size:13px;color:var(--muted)}
+.card h3{margin:4px 0 6px;font-size:16.5px;line-height:1.3}
+.card p{margin:0 0 12px;color:var(--ink2);font-size:14.5px;flex:1}
+.card .result{color:var(--accent);font-weight:600;font-size:14px;margin:-4px 0 12px;flex:none}
+.card .links{display:flex;gap:14px;font-size:14.5px;font-weight:600}
+.card .links a{color:var(--accent);text-decoration:none}
+.card .links a:hover{text-decoration:underline}
+.mats{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.mat{display:flex;gap:12px;align-items:center;border:1px solid var(--line);border-radius:12px;padding:12px 14px;text-decoration:none}
+.mat:hover{border-color:var(--accent)}
+.mat .ico{width:36px;height:44px;border-radius:6px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-size:11px;font-weight:700;flex:none}
+.mat b{display:block;font-size:15px}
+.mat span span{font-size:13px;color:var(--muted)}
+
+footer{margin-top:48px;padding:24px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="me">
+      <div class="photo" id="photo" aria-hidden="true">GU</div>
+      <div>
+        <h1>Gabriele Usai</h1>
+        <p>AI Specialist Intern at IDC<br>Master’s Graduate at Fordham University</p>
+      </div>
+    </div>
+    <div class="buttons">
+      <a class="btn" href="mailto:usaigabrialberto@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5h20v14H2zm2 2v.5l8 5 8-5V7zm16 2.9-8 5-8-5V17h16z"/></svg>Send message</a>
+      <a class="btn line" href="https://www.linkedin.com/in/gabriele-usai/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM2.5 8.5h3V21h-3zM9 8.5h2.9v1.7h.1c.4-.8 1.4-1.9 3.4-1.9 3.6 0 4.1 2.2 4.1 5.2V21h-3v-6.6c0-1.6 0-3.6-2.2-3.6s-2.5 1.7-2.5 3.5V21H9z"/></svg>LinkedIn</a>
+    </div>
+  </header>
+
+  <div class="cols">
+    <section aria-labelledby="h-edu">
+      <h2 id="h-edu">Education</h2>
+
+      <details>
+        <summary>
+          <span class="logo" data-domain="fordham.edu">F</span>
+          <span><div class="title">Fordham University, Gabelli School of Business</div><div class="sub">MS Information Technology · GPA 3.8</div><div class="dates">Aug 2025 – Dec 2026 · New York, NY</div></span>
+          <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        </summary>
+        <div class="body">
+          <ul>
+            <li><b>Graduate Assistant:</b> evaluate SQL and data-analysis coursework for 200+ graduate students in Information Systems, turning technical concepts into clear, actionable feedback.</li>
+            <li><b>Treasurer, AI Society:</b> oversee budgeting, financial governance and resource allocation for 100+ members.</li>
+            <li><b>Coursework:</b> Machine Learning for Business, Project Management, Web Analytics, Systems Analysis &amp; Design, Data Management and SQL, IT Strategy &amp; Management.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          <span class="logo" data-domain="unicatt.it">UC</span>
+          <span><div class="title">Università Cattolica del Sacro Cuore</div><div class="sub">Bachelor of Business Administration, Management</div><div class="dates">Sep 2020 – Nov 2023 · Milan, Italy</div></span>
+          <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        </summary>
+        <div class="body"><ul><li>Management major, GPA 3.5.</li></ul></div>
+      </details>
+
+      <details>
+        <summary>
+          <span class="logo" data-domain="lse.ac.uk">LSE</span>
+          <span><div class="title">London School of Economics</div><div class="sub">Summer Exchange</div><div class="dates">Jun 2023 – Jul 2023 · London, UK</div></span>
+          <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        </summary>
+        <div class="body"><ul><li>Business Strategy in International and Emerging Markets, GPA 3.5.</li></ul></div>
+      </details>
+    </section>
+
+    <section aria-labelledby="h-exp">
+      <h2 id="h-exp">Experience</h2>
+
+      <details>
+        <summary>
+          <span class="logo" data-domain="idc.com">IDC</span>
+          <span><div class="title">AI Specialist Intern</div><div class="sub">IDC</div><div class="dates">May 2026 – Present · New Jersey</div></span>
+          <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        </summary>
+        <div class="body">
+          <ul>
+            <li>Embedded with Finance teams as a forward-deployed AI specialist, translating operational pain points into 10+ AI use cases and rapidly building and deploying solutions with Claude Code, APIs, Claude Skills and Netlify.</li>
+            <li>Partnered directly with the CFO to scope, build, deploy and iterate a production AI agent integrating financial data sources, taking it from proof of concept through real team adoption.</li>
+            <li>Drove AI adoption across Finance through biweekly workshops for 100+ attendees, translating technical capabilities into practical workflows and incorporating user feedback into solution development.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          <span class="logo" data-domain="un.org">UN</span>
+          <span><div class="title">AI Consultant Intern</div><div class="sub">United Nations</div><div class="dates">Jan 2026 – May 2026 · New York, NY</div></span>
+          <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        </summary>
+        <div class="body">
+          <ul>
+            <li>Supported the deployment of a Microsoft Copilot Studio AI agent serving 2,000+ staff across 132 offices, structuring knowledge and data inputs to improve reliability, routing and operational workflows.</li>
+            <li>Structured and standardized knowledge and data inputs to improve consistency, reduce manual effort and improve process efficiency across global teams, enabling more reliable and scalable support operations.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          <span class="logo" data-domain="bancagenerali.it">BG</span>
+          <span><div class="title">IT Analyst Intern</div><div class="sub">Banca Generali</div><div class="dates">Jan 2025 – Jun 2025 · Milan, Italy</div></span>
+          <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        </summary>
+        <div class="body">
+          <ul>
+            <li>Gathered requirements from 40+ senior stakeholders and translated complex business needs into prioritized technology initiatives and executable roadmaps across 600+ projects.</li>
+            <li>Built Power BI and Excel dashboards to track performance metrics, utilization trends and risk indicators, delivering insights that improved forecast accuracy by 35%.</li>
+            <li>Delivered executive presentations and reporting frameworks that strengthened cross-functional alignment, communication transparency and change initiatives across leadership teams.</li>
+          </ul>
+        </div>
+      </details>
+    </section>
+  </div>
+
+  <section class="full" aria-labelledby="h-proj">
+    <h2 id="h-proj">Projects</h2>
+    <a class="btn gh" href="https://github.com/Gabriele-Usai" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5a10.5 10.5 0 0 0-3.3 20.5c.5.1.7-.2.7-.5v-1.8c-2.9.6-3.5-1.4-3.5-1.4-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.7.1-.7 1 .1 1.6 1.1 1.6 1.1.9 1.6 2.5 1.2 3.1.9.1-.7.4-1.2.7-1.4-2.3-.3-4.8-1.2-4.8-5.2 0-1.1.4-2.1 1.1-2.8-.1-.3-.5-1.3.1-2.8 0 0 .9-.3 2.9 1.1a10 10 0 0 1 5.2 0c2-1.4 2.9-1.1 2.9-1.1.6 1.5.2 2.5.1 2.8.7.7 1.1 1.7 1.1 2.8 0 4-2.5 4.9-4.8 5.2.4.3.7 1 .7 1.9v2.9c0 .3.2.6.7.5A10.5 10.5 0 0 0 12 1.5z"/></svg>See my projects on GitHub</a>
+  </section>
+
+  <section class="full" id="materials" aria-labelledby="h-mat" hidden>
+    <h2 id="h-mat">Materials</h2>
+    <div class="mats">
+      <a class="mat" href="materials/resume.pdf" data-needs-file><span class="ico">PDF</span><span><b>Resume</b><span>2026</span></span></a>
+      <a class="mat" href="materials/march-madness.pdf" data-needs-file><span class="ico">PDF</span><span><b>March Madness model</b><span>Deloitte competition deck</span></span></a>
+      <a class="mat" href="materials/ai-workshop.pdf" data-needs-file><span class="ico">PDF</span><span><b>AI for Finance workshop</b><span>Sample slides</span></span></a>
+      <a class="mat" href="materials/certificates.pdf" data-needs-file><span class="ico">PDF</span><span><b>Certificates</b><span>Bloomberg, Microsoft, IBM</span></span></a>
+    </div>
+  </section>
+
+  <footer>© 2026 Gabriele Usai</footer>
+</div>
+
+<script>
+// Photo: assets/photo.jpg replaces the initials once added.
+(() => { const img = new Image(); img.alt = 'Gabriele Usai';
+  img.onload = () => { const p = document.getElementById('photo'); p.textContent = ''; p.appendChild(img); p.removeAttribute('aria-hidden'); };
+  img.src = 'assets/photo.jpg'; })();
+
+// Logos: assets/logos/<domain>.png, initials as fallback.
+document.querySelectorAll('.logo[data-domain]').forEach(el => {
+  const d = el.dataset.domain;
+  const sources = [`assets/logos/${d}.png`];
+  const tryNext = i => { if (i >= sources.length) return;
+    const img = new Image(); img.alt = '';
+    img.onload = () => { if (img.naturalWidth >= 32) { el.textContent = ''; el.appendChild(img); } else tryNext(i + 1); };
+    img.onerror = () => tryNext(i + 1);
+    img.src = sources[i]; };
+  tryNext(0);
+});
+
+// Materials: show only files that exist.
+const needs = [...document.querySelectorAll('[data-needs-file]')];
+Promise.all(needs.map(a => fetch(a.getAttribute('href'), {method:'HEAD'}).then(r => r.ok).catch(() => false)
+  .then(ok => { a.hidden = !ok; return ok; })))
+  .then(() => { if ([...document.querySelectorAll('.mat')].some(m => !m.hidden)) document.getElementById('materials').hidden = false; });
+</script>
+</body>
+</html>
